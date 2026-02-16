@@ -1,15 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <title>DJ Sinistor</title>
+        <meta name="description" content="Primitive garage. Sinister spins." />
+
+        <!-- Favicon -->
+        <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/assets/icons/favicon.png" type="image/png" />
+
+        <!-- Social preview (nice to have) -->
+        <meta property="og:title" content="DJ Sinistor" />
+        <meta property="og:description" content="Primitive garage. Sinister spins." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://djsinistor.com/" />
+        <!-- Add later: <meta property="og:image" content="https://djsinistor.com/assets/img/og.jpg" /> -->
+
+        <link rel="stylesheet" href="/css/style.css" />
     </head>
 
     <body>
-        <h1>Dark as the night</h1>
-        <h2>Light as the dark</h2>
+        <header class="hero">
+            <div class="hero__inner">
+                <h1 class="hero__title">DJ SINISTOR</h1>
+                <p class="hero__tagline">Primitive garage.<br>Sinister spins.</p>
+
+                <nav class="hero__links" aria-label="Social links">
+                    <a href="https://instagram.com/djsinistor" target="_blank" rel="noreferrer">Instagram</a>
+                    <a href="https://facebook.com/djsinistor" target="_blank" rel="noreferrer">Facebook</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="section" id="sound">
+                <h2 class="section__title">The Sound</h2>
+                <p class="section__text">
+                    1960s garage punk, fuzz, and shadows — Nuggets spirit with a taste for the uncanny.
+                </p>
+            </section>
+
+            <section class="section" id="spins">
+                <h2 class="section__title">Upcoming Spins</h2>
+                <ul class="events" aria-label="Upcoming events">
+                    <li class="event">
+                        <span class="event__date">23 April</span>
+                        <span class="event__info">Details soon</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="section" id="bookings">
+                <h2 class="section__title">Bookings</h2>
+                <p class="section__text">
+                    <a class="link" href="mailto:info.djsinistor@gmail.com">info.djsinistor@gmail.com</a>
+                </p>
+            </section>
+        </main>
+
+        <script src="/js/main.js" defer></script>
     </body>
 
 </html>

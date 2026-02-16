@@ -1,0 +1,1 @@
+// DJ Sinistor site JS (keep minimal)
