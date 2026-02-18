@@ -32,7 +32,7 @@ a {
 }
 
 .hero {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   align-items: flex-start; /* pushes content upward */
   justify-content: center;
@@ -64,14 +64,15 @@ a {
   margin: clamp(0.75rem, 2vw, 1.2rem) 0 0;
   color: var(--muted);
   line-height: 1.7;
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-size: clamp(1.3rem, 1.6vw, 1.15rem);
 }
 
 .hero__links {
-  margin-top: 1.25rem;
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
+  font-size: 1.2rem;
 }
 
 .section {
