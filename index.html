@@ -27,56 +27,66 @@
         <link rel="stylesheet" href="/css/style.css" />
     </head>
 
+
     <body>
+        <header class="hero" role="banner">
+            <div class="hero__inner">
+                <img src="/assets/icons/dj-sinistor-logo.png" alt="DJ Sinistor logo" class="hero__logo" width="1200"
+                    height="600" loading="eager" decoding="async" />
 
-        <body>
-            <header class="hero" role="banner">
-                <div class="hero__inner">
-                    <img src="/assets/icons/dj-sinistor-logo.png" alt="DJ Sinistor logo" class="hero__logo" width="1200"
-                        height="600" loading="eager" decoding="async" />
+                <h1 class="hero__title">DJ Sinistor</h1>
 
-                    <h1 class="hero__title">DJ Sinistor</h1>
+                <p class="hero__tagline">Primitive garage. Dark fuzz.</p>
 
-                    <p class="hero__tagline">Primitive garage. Dark fuzz.</p>
+                <nav class="hero__links" aria-label="Social links">
+                    <a href="https://instagram.com/djsinistor" target="_blank" rel="noreferrer">Instagram</a>
+                    <a href="https://facebook.com/djsinistor" target="_blank" rel="noreferrer">Facebook</a>
+                </nav>
+            </div>
+        </header>
 
-                    <nav class="hero__links" aria-label="Social links">
-                        <a href="https://instagram.com/djsinistor" target="_blank" rel="noreferrer">Instagram</a>
-                        <a href="https://facebook.com/djsinistor" target="_blank" rel="noreferrer">Facebook</a>
-                    </nav>
-                </div>
-            </header>
+        <main>
+            <section class="section" id="sound">
+                <p class="section__text">
+                    DJ Sinistor spins raw garage rock, fuzz and dark vinyl — shadowy sound, primitive rhythm, and
+                    something slightly uncanny.
+                </p>
+            </section>
 
-            <main>
-                <section class="section" id="sound">
-                    <p class="section__text">
-                        DJ Sinistor spins raw garage rock, fuzz and dark vinyl — shadowy sound, primitive rhythm, and
-                        something slightly uncanny.
-                    </p>
-                </section>
+            <section class="section" id="spins">
+                <h2 class="section__title">Upcoming Spins</h2>
+                <ul class="events" aria-label="Upcoming events">
+                    <li class="event">
+                        <span class="event__date">23 April</span>
+                        <span class="event__info">
+                            Aces &amp; Eights Basement, NW5. Tickets
+                            <a href="https://wegottickets.com/event/694249" target="_blank" rel="noreferrer">here</a>
+                        </span>
+                    </li>
+                </ul>
+            </section>
 
-                <section class="section" id="spins">
-                    <h2 class="section__title">Upcoming Spins</h2>
-                    <ul class="events" aria-label="Upcoming events">
-                        <li class="event">
-                            <span class="event__date">23 April</span>
-                            <span class="event__info">
-                                Aces &amp; Eights Basement, NW5. Tickets
-                                <a href="https://wegottickets.com/event/694249" target="_blank"
-                                    rel="noreferrer">here</a>
-                            </span>
-                        </li>
-                    </ul>
-                </section>
+            <section class="section" id="bookings">
+                <h2 class="section__title">Bookings</h2>
+                <p class="section__text">
+                    <a class="link" href="mailto:info.djsinistor@gmail.com">info.djsinistor@gmail.com</a>
+                </p>
+            </section>
 
-                <section class="section" id="bookings">
-                    <h2 class="section__title">Bookings</h2>
-                    <p class="section__text">
-                        <a class="link" href="mailto:info.djsinistor@gmail.com">info.djsinistor@gmail.com</a>
-                    </p>
-                </section>
-            </main>
+            <!-- Launch day -- to delete -- -->
+            <div class="launch-overlay" id="launchOverlay">
+                <img src="/assets/icons/dj-sinistor-logo.png" alt="" class="launch-overlay__logo" aria-hidden="true" />
 
-            <script src="/js/main.js" defer></script>
-        </body>
+                <p class="launch-overlay__date">
+                    30 April 2026 — Walpurgisnacht
+                    <span class="launch-overlay__sub">Something awakens at nightfall</span>
+                    <span class="launch-overlay__countdown" id="countdown">00d 00h 00m 00s</span>
+                </p>
+            </div>
+            <!-- Launch day - end -->
+        </main>
+
+        <script src="/js/main.js" defer></script>
+    </body>
 
 </html>
