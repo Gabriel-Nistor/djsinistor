@@ -1,3 +1,6 @@
+document.body.style.overflow = "hidden";
+document.body.style.overflow = "";
+
 (function () {
     const overlay = document.getElementById("launchOverlay");
     const logo = overlay.querySelector(".launch-overlay__logo");
