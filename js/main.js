@@ -44,10 +44,10 @@ document.body.style.overflow = "";
     }
 
     // click to enter
-    overlay.addEventListener("click", () => {
-        active = false;
-        overlay.classList.add("launch-overlay--hidden");
-    });
+    // overlay.addEventListener("click", () => {
+    //     active = false;
+    //     overlay.classList.add("launch-overlay--hidden");
+    // });
 
     flashLogo();
 })();
