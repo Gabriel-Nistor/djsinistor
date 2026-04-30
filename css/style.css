@@ -31,6 +31,20 @@ a {
   color: inherit;
 }
 
+/* BODY FADE IN */
+body {
+  background: #000;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* When page is ready */
+body.fade-in {
+  opacity: 1;
+}
+
+/* --------- */
+
 .hero {
   /* min-height: 100vh; */
   display: flex;
@@ -146,81 +160,3 @@ a {
     padding: 4rem 1.25rem;
   }
 }
-
-/* Placeholder launch day */
-.launch-overlay {
-  position: fixed;
-  inset: 0;
-  background: #000;
-  z-index: 9999;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.launch-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  height: 100dvh; /* 👈 key for mobile */
-}
-
-.launch-overlay--hidden {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease-out;
-}
-
-.launch-overlay__logo {
-  position: absolute;
-  width: min(70vw, 700px);
-  height: auto;
-  opacity: 0;
-  pointer-events: none;
-  filter: brightness(1.2) contrast(1.1);
-  transition: opacity 0.25s ease-out;
-}
-.launch-overlay__date {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  color: #fff;
-  text-align: center;
-
-  font-size: 1.7rem;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-
-  opacity: 0.85;
-}
-
-.launch-overlay__sub {
-  display: block;
-  margin-top: 1rem;
-
-  font-size: 1.3rem;
-  letter-spacing: 0.45em;
-
-  opacity: 0;
-  animation: fadeInText 2s ease forwards;
-  animation-delay: 1.5s;
-}
-
-@keyframes fadeInText {
-  to {
-    opacity: 0.5;
-  }
-}
-
-.launch-overlay__countdown {
-  display: block;
-  margin-top: 1.2rem;
-  font-size: 1rem;
-  letter-spacing: 0.3em;
-  opacity: 0.45;
-}
-
-/* finish of the placeholder */
