@@ -135,7 +135,8 @@ body.fade-in {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.8rem 0;
+  padding: 1.2rem 1.2rem;
+  background-color: #131313;
 }
 
 .event__date {
