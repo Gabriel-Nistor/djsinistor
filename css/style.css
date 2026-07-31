@@ -162,3 +162,48 @@ body.fade-in {
     padding: 4rem 1.25rem;
   }
 }
+
+/* More info button */
+.more-info-content[hidden] {
+  display: none;
+}
+
+.more-info-btn,
+.hide-info-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.25s ease;
+}
+
+.more-info-btn:hover,
+.hide-info-btn:hover {
+  opacity: 1;
+}
+
+.more-info-btn::after,
+.hide-info-btn::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  margin-top: 0.45rem;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.more-info-btn:hover::after,
+.hide-info-btn:hover::after {
+  transform: scaleX(1);
+}
