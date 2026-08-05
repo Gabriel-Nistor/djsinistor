@@ -4,22 +4,27 @@ window.addEventListener("load", () => {
 
 // More info:
 const moreInfoButton = document.querySelector(".more-info-btn");
-const moreInfoContent = document.querySelector(".more-info-content");
 const hideInfoButton = document.querySelector(".hide-info-btn");
+const moreInfoContent = document.querySelector(".more-info-content");
 
-moreInfoButton.addEventListener("click", () => {
-    moreInfoContent.hidden = false;
-    moreInfoButton.hidden = true;
-    moreInfoButton.setAttribute("aria-expanded", "true");
-});
+function toggleMoreInfo() {
+    const isOpening = moreInfoContent.hidden;
 
-hideInfoButton.addEventListener("click", () => {
-    moreInfoContent.hidden = true;
-    moreInfoButton.hidden = false;
-    moreInfoButton.setAttribute("aria-expanded", "false");
+    moreInfoContent.hidden = !isOpening;
 
-    moreInfoButton.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-    });
-});
+    moreInfoButton.textContent = isOpening
+        ? "Hide info"
+        : "More info";
+
+    moreInfoButton.setAttribute("aria-expanded", isOpening);
+
+    if (!isOpening) {
+        moreInfoButton.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
+}
+
+moreInfoButton.addEventListener("click", toggleMoreInfo);
+hideInfoButton.addEventListener("click", toggleMoreInfo);
