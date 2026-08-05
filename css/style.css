@@ -207,3 +207,84 @@ body.fade-in {
 .hide-info-btn:hover::after {
   transform: scaleX(1);
 }
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__logo {
+  opacity: 0;
+  transform: translateY(12px) scale(0.985);
+  animation:
+    logo-reveal 1.6s ease-out 0.2s forwards,
+    logo-breathe 5s ease-in-out 2s infinite;
+}
+
+.hero__tagline {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: text-reveal 1s ease-out 1.2s forwards;
+}
+
+.hero__links {
+  opacity: 0;
+  animation: text-reveal 1s ease-out 1.7s forwards;
+}
+
+@keyframes logo-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes logo-breathe {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.12));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.22))
+      drop-shadow(0 0 3px rgba(150, 0, 0, 0.12));
+  }
+}
+
+@keyframes text-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: page-reveal 1.2s ease-out 1.8s forwards;
+}
+
+@keyframes page-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Update the accessibility section: */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__logo,
+  .hero__tagline,
+  .hero__links,
+  main {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
